@@ -1,6 +1,6 @@
 function abortInit()
-  print(‘Press ENTER to abort startup’)
-  uart.on(“data”, “\r”,
+  print("Press ENTER to abort startup")
+  uart.on("data"�, "\r"�,
     function(data)
       tmr.unregister(0) — disable the start up timer
       uart.on(“data”) — stop capturing the uart
