@@ -9,7 +9,7 @@ function abortInit()
     tmr.alarm(0,5000,0, function()
       uart.on(“data”) — stop capturing the uart
         print(‘Running startup’)
-        dofile(‘all.lua’) — run the main program
+        dofile(‘wifi.lua’) — run the main program
     end)
 end
 
