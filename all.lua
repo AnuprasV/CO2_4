@@ -26,6 +26,11 @@ uart.on("data", 0,
     function(data)
 	--print("receive from uart:", data)
 		if string.len(data) == 9 then
+			local crc = 0
+                        for i = 2, 8 do
+                          crc = crc + byte(data,i)
+                        end
+                        crc = 255 - crc
 			result = string.byte(data,3)*256 + string.byte(data,4)
 			t = result = string.byte(data,5)-20
 --			print (result)
