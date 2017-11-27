@@ -1,6 +1,5 @@
 t = 0
 
-
 function sendt(t,co,key)
  print("Temp:"..t.." C\n")
 conn=net.createConnection(net.TCP, 0) 
